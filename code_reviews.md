@@ -30,3 +30,6 @@ Good:
 
 **Include everyone**  
 It is important to include everyone in the code review process. It helps every member being comfortable with the process itself. For junior developers, it is an excellent opportunity to learn.
+
+***References***  
+- https://www.perforce.com/blog/qac/9-best-practices-for-code-review
