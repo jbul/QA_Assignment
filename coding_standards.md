@@ -6,11 +6,11 @@ Finding good names improves code maintainability and makes code more readable.
 
 
 
-***Guildelines***
+***Guidelines***
 - The name of any variable, function or class should answer three big questions; why it exists, what it does and what it is used.
 - The name of the variable or function should be understandable and meaningful. 
 - Variables or functions naming should start with lowercase.
-- Constant variable in capital lettters.
+- Constant variable in capital letters.
 - Should follow language convention as well.<br/>
 <b>For example</b>: Java recommend using camelCase convention ie. *firstName*, whereas Python recommend naming with underscore ie. *first_name*.
 
@@ -29,7 +29,7 @@ Good:
 "Imagine you go to a supermarket and there is no consistency over how the items are placed in the area. Some dairy products are at the clothing sections, others are at the cosmetics area, and bread products are placed with the vegetables."<br/> Indentation is the necessary arrangement that separate code blocks that belongs together.<br/>
 Proper indentation is very important to increase the readability of the code.
 
-***Guildelines***
+***Guidelines***
 
 - Indentation must be performed every time a code will be nested in another one.
 - There should be a space after commas<br/>
@@ -60,7 +60,7 @@ function myGoodFunction(args) {<br/>
 ## Code should be well documented  
 "Nothing can be more helpful than a well-placed comment. And nothing can be more damaging than comments that spread disinformation and lies".<br/>
 
-***Guildelines***  
+***Guidelines***  
 - Code changes, comments should evolve with code as well.
 - Comments should state intent, not justify bad code
 - Simple variables as well as getter / setters must not be commented
@@ -98,7 +98,7 @@ public void apiMethod(Object param) { ... }
 
 **A function/method should only do one thing**
 
-***Guildelines***
+***Guidelines***
 - Method should be small. Ideal length of 15 lines.
 - Maximum with 3 arguments.
 - The indent level of a function should not be greater than one or two.
