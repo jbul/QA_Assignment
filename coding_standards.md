@@ -44,7 +44,7 @@ Bad:
 
 ```java
 public void myBadFunction (arg){
-for(int i=0;i< 10;i++){<br/>
+for(int i=0;i< 10;i++){
 System.out.println ("I am the bad code"+i) ;   
 }    
 }
