@@ -1,8 +1,10 @@
 # Coding standards
 
-**Follow naming conventions**  
+## Follow naming conventions  
 Names are everywhere in the code. Whether it is variables, functions or packages. "Having irrelevant or contradicting names to your pages, variables, functions or arrays will only create troubles in the future."<br/>
 Finding good names improves code maintainability and makes code more readable.
+
+
 
 ***Guildelines***
 - The name of any variable, function or class should answer three big questions; why it exists, what it does and what it is used.
@@ -23,7 +25,7 @@ Good:
 <code>private long elapsedTimeInDays;</code>
 
 
-**Indentation**  
+## Indentation  
 "Imagine you go to a supermarket and there is no consistency over how the items are placed in the area. Some dairy products are at the clothing sections, others are at the cosmetics area, and bread products are placed with the vegetables."<br/> Indentation is the necessary arrangement that separate code blocks that belongs together.<br/>
 Proper indentation is very important to increase the readability of the code.
 
@@ -55,7 +57,7 @@ function myGoodFunction(args) {<br/>
 }<br/>
 </code>
 
-**Code should be well documented**  
+## Code should be well documented  
 "Nothing can be more helpful than a well-placed comment. And nothing can be more damaging than comments that spread disinformation and lies".<br/>
 
 ***Guildelines***  
@@ -65,6 +67,7 @@ function myGoodFunction(args) {<br/>
 - Use language documentation (Javadoc, PHPDoc) on publicly accessible methods / classes
 
 ***Examples***  
+
 
 Bad:
 
@@ -123,6 +126,74 @@ private void myGoodAddBookToShelf(Book bookToAdd) {<br/>
 &nbsp;&nbsp;}<br/>
 }
 </code>  
+
+## Testing:
+
+Testing can be a massive timesaver as you can automate repetetive tasks, removing the need to manually test new features every time you want to deploy code. 
+
+***Guidelines***
+
+*	Ensure tests are simple and readable.
+*   One test should only test one thing. If you have more than one task being tested, create new tests for each task.
+*	There should be a test for every feature.
+*	Every new feature should have a new test implemented before it is deployed.
+*	If a new feature changes how code works, each effected test must be updated.
+
+***Examples***
+
+Bad:
+
+//This test is bad as it is testing two different methods
+
+@Test
+
+public void generalTest(){
+
+    asertEquals(4, MainClass.multiply(2,2));
+    assertEquals("1997", MainClass.getYear("Test User"));
+}
+
+Good:
+
+//These tests are good as they are each testing two different methods
+
+@Test
+
+public void multiplyTest(){
+
+    asertEquals(4, MainClass.multiply(2,2));
+    assertEquals(6, MainClass.multiply(2,3));
+    assertEquals(70, MainClass.multiply(10,7));
+
+}
+
+@Test
+
+public void getYearTest(){
+
+    assertEquals("1997", MainClass.getYear("Test User"));
+    assertEquals("1997", MainClass.getYear("John Smith"));
+    assertEquals("1997", MainClass.getYear("Jack Johnson"));
+}
+
+## File and Folder Organization
+Using good file and folder organization can help to ensure that a project is easier to navigate around. Although this seems like a simple thing, having files organized can save a team a significant amount of time.
+
+***Guidelines***
+
+* Give files meaningful names
+* Create folders for different class types *e.g. Objects, DAO's Resource files*
+* Avoid having a large number of nested folders
+
+***Examples***
+
+Bad:
+
+A long list of files with no organization
+
+Good:
+
+A well organized file structure that has folders for all file types
 
 
 ***References***  
