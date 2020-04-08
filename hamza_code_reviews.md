@@ -6,7 +6,7 @@ A SmartBear study of a Cisco Systems programming team revealed that developers s
 - From the graph, we can see that in practice, a review of 200-400 LOC over 60 to 90 minutes should yield 70-90% defect discovery. If 10 defects existed in the code, a properly conducted review would find between seven and nine of them. This is a very good ratio.
 - From the graph, we can also see that the brain can only process so much information so it is important to <strong><em>not go above</em></strong> the 400 LOC range.
 
-![img1](img1.gif)
+![img1](images/img1.gif)
 
 **Approving vs Requesting Changes**<br/>
 A good way of organizing code reviews would be that once a reviewer completes their review, they can either mark it approved, block the review with change requests, or not set a specific status, leaving it in a “not yet approved” state. How reviewers use the approve and request changes statuses is telling of the code reviews.
@@ -22,7 +22,7 @@ A good way of organizing code reviews would be that once a reviewer completes th
 - For changes that are more urgent than others, reviewers try to make themselves available for quicker review
 
 **Avoid Sarcasm and Emotions**<br/>
-Using emojis or not addressing specific issues is extremeley counter productive. keeping emotions out of code review on both sides is essential. As a rule of thumb, it’s usually better to give recommendations with reasoning than it is to just point blank tell others what they should have done in the first place.
+Using emojis or not addressing specific issues is extremely counter productive. keeping emotions out of code review on both sides is essential. As a rule of thumb, it’s usually better to give recommendations with reasoning than it is to just point blank tell others what they should have done in the first place.
 
 **_Example_**<br/>
 Bad:<br/>
