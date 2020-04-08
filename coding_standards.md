@@ -30,7 +30,7 @@ Good:
 
 @Test
 
-public void generalTest(){
+public void multiplyTest(){
 
     asertEquals(4, MainClass.multiply(2,2));
     assertEquals(6, MainClass.multiply(2,3));
@@ -40,7 +40,7 @@ public void generalTest(){
 
 @Test
 
-public void generalTest(){
+public void getYearTest(){
 
     assertEquals("1997", MainClass.getYear("Test User"));
     assertEquals("1997", MainClass.getYear("John Smith"));
