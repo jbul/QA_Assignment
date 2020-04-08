@@ -1,4 +1,5 @@
 ## What we would do differently
+
 * Due to the circumstances, we were unable to meet in person, which caused some communication issues.
 
 * As a team, we would agree on who have to merge in the end: the developer or the reviewer.
