@@ -18,12 +18,15 @@ Finding good names improves code maintainability and makes code more readable.
 
 Bad:
 
-<code>private long d; // elapsed time in days</code>
+```java
+private long d; // elapsed time in days
+```
 
 Good: 
 
-<code>private long elapsedTimeInDays;</code>
-
+```java
+private long elapsedTimeInDays;
+```
 
 ## Indentation  
 "Imagine you go to a supermarket and there is no consistency over how the items are placed in the area. Some dairy products are at the clothing sections, others are at the cosmetics area, and bread products are placed with the vegetables."<br/> Indentation is the necessary arrangement that separate code blocks that belongs together.<br/>
@@ -39,23 +42,23 @@ Proper indentation is very important to increase the readability of the code.
 
 Bad:
 
-<code>
-function myBadFunction (arg){<br/>
+```java
+public void myBadFunction (arg){
 for(int i=0;i< 10;i++){<br/>
-System.out.println ("I am the bad code"+i) ;<br/>    
-}<br/>    
-}<br/>
-</code>
+System.out.println ("I am the bad code"+i) ;   
+}    
+}
+```
 
 Good:
 
-<code>
-function myGoodFunction(args) {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;for (int i=0; i < 10; i++) {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("I am the bad code" + i);<br/>    
-&nbsp;&nbsp;&nbsp;&nbsp;}<br/>    
-}<br/>
-</code>
+```java
+public void myGoodFunction(args) {
+    for (int i=0; i < 10; i++) {
+        System.out.println("I am the bad code" + i);  
+    }   
+}
+```
 
 ## Code should be well documented  
 "Nothing can be more helpful than a well-placed comment. And nothing can be more damaging than comments that spread disinformation and lies".<br/>
@@ -71,30 +74,30 @@ function myGoodFunction(args) {<br/>
 
 Bad:
 
-<code>
+```java
 /**<br/>
-&nbsp;The age of the person<br/>
-*/<br/>
-private int personAge;<br/>
+ * The age of the person<br/>
+*/
+private int personAge;
 
 /**  
 Set the person age to the given integer personAge  
 */  
 public void setPersonAge(int personAge) {  
-&nbsp;&nbsp;&nbsp;&nbsp;this.personAge = personAge;   
+    this.personAge = personAge;   
 }
-</code>
+```
 
 Good:
 
-<code>
-/**<br/>
-Do some business on the given param object<br/>
-if param has this property, then do that
-Given param must not be null.  <br/>
-*/<br/>
+```java
+/**
+ * Do some business on the given param object<br/>
+ * if param has this property, then do that
+ * Given param must not be null.  <br/>
+*/
 public void apiMethod(Object param) { ... }
-</code>
+```
 
 **A function/method should only do one thing**
 
@@ -106,26 +109,26 @@ public void apiMethod(Object param) { ... }
 ***Examples***  
 
 Bad:  
-<code>
-private void myBadAddBookToShelf(String isbn, int yearPublished, String author, String title, String summary) {<br/>
-&nbsp;&nbsp;if (isbn != null && isbn.length() > 10) {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;if (author != null && author.contains(" ")) {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (yearPublish > 0) {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shelf.add(new Book(isbn, yearPublished, author, title, summary));<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-&nbsp;&nbsp;}<br/>
+```java
+private void myBadAddBookToShelf(String isbn, int yearPublished, String author, String title, String summary) {
+    if (isbn != null && isbn.length() > 10) {
+        if (author != null && author.contains(" ")) {
+            if (yearPublish > 0) {
+                shelf.add(new Book(isbn, yearPublished, author, title, summary));
+            }
+        }
+    }
 }
-</code>
+```
 
 Good:  
-<code>
-private void myGoodAddBookToShelf(Book bookToAdd) {<br/>
-&nbsp;&nbsp;if (isValidBook(book)) {<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;shelf.add(book);<br/>
-&nbsp;&nbsp;}<br/>
+```java
+private void myGoodAddBookToShelf(Book bookToAdd) {
+    if (isValidBook(book)) {
+        shelf.add(book);
+    }
 }
-</code>  
+```  
 
 ## Testing:
 
@@ -143,22 +146,22 @@ Testing can be a massive timesaver as you can automate repetetive tasks, removin
 
 Bad:
 
+```java
 //This test is bad as it is testing two different methods
 
 @Test
-
 public void generalTest(){
 
     asertEquals(4, MainClass.multiply(2,2));
     assertEquals("1997", MainClass.getYear("Test User"));
 }
+```
 
 Good:
-
+```java
 //These tests are good as they are each testing two different methods
 
 @Test
-
 public void multiplyTest(){
 
     asertEquals(4, MainClass.multiply(2,2));
@@ -175,7 +178,7 @@ public void getYearTest(){
     assertEquals("1997", MainClass.getYear("John Smith"));
     assertEquals("1997", MainClass.getYear("Jack Johnson"));
 }
-
+```
 ## File and Folder Organization
 Using good file and folder organization can help to ensure that a project is easier to navigate around. Although this seems like a simple thing, having files organized can save a team a significant amount of time.
 
