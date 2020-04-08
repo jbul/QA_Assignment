@@ -24,7 +24,7 @@ A good way of organizing code reviews would be that once a reviewer completes th
 - For changes that are more urgent than others, reviewers try to make themselves available for quicker review
 
 ## Avoid Sarcasm and Emotions  <br/>
-Using emojis or not addressing specific issues is extremeley counter productive. keeping emotions out of code review on both sides is essential. As a rule of thumb, it’s usually better to give recommendations with reasoning than it is to just point blank tell others what they should have done in the first place.
+Using emojis or not addressing specific issues is extremely counter productive. keeping emotions out of code review on both sides is essential. As a rule of thumb, it’s usually better to give recommendations with reasoning than it is to just point blank tell others what they should have done in the first place.
 
 ***Guidelines***  
 - Give constructive feedbacks, rather than critical ones.
