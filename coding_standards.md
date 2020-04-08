@@ -55,7 +55,7 @@ Good:
 ```java
 public void myGoodFunction(args) {
     for (int i=0; i < 10; i++) {
-        System.out.println("I am the bad code" + i);  
+        System.out.println("I am the good code" + i);  
     }   
 }
 ```
