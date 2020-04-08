@@ -1,29 +1,50 @@
-## Commenting:
+## Testing:
 
-Comments are the most simple way of explaining to both technically knowledgable and non-knowledgable poeple what your code is doing. For this reason, comments must be added in a number of situations. 
+Testing can be a massive timesaver as you can automate repetetive tasks, removing the need to manually test new features every time you want to deploy code. 
 
 ***Guidelines***
 
-*	At the top of each class, add a breif comment about what the function of the class is and who created it.
-*	For each method, add a comment briefly explaining what the method is doing.
-*	If you believe a section of code does not appear to be obvious, add comments to briefly explain what it is for
-*	Avoid obvious comments
-*	Comments should typically be no longer than 1 or 2 lines
+*	Ensure tests are simple and readable.
+*   One test should only test one thing. If you have more than one task being tested, create new tests for each task.
+*	There should be a test for every feature.
+*	Every new feature should have a new test implemented before it is deployed.
+*	If a new feature changes how code works, each effected test must be updated.
 
 ***Examples***
 
 Bad:
 
-/* This method was created to add a new user to the database, 
-depending on if the user already exists in the database */
- public void addNewUser(){
+//This test is bad as it is testing two different methods
 
+@Test
+
+public void generalTest(){
+
+    asertEquals(4, MainClass.multiply(2,2));
+    assertEquals("1997", MainClass.getYear("Test User"));
 }
 
 Good:
-/*Create new user with unique details*/
- public void addNewUser(){
 
+//These tests are good as they are each testing two different methods
+
+@Test
+
+public void generalTest(){
+
+    asertEquals(4, MainClass.multiply(2,2));
+    assertEquals(6, MainClass.multiply(2,3));
+    assertEquals(70, MainClass.multiply(10,7));
+
+}
+
+@Test
+
+public void generalTest(){
+
+    assertEquals("1997", MainClass.getYear("Test User"));
+    assertEquals("1997", MainClass.getYear("John Smith"));
+    assertEquals("1997", MainClass.getYear("Jack Johnson"));
 }
 
 
@@ -49,3 +70,5 @@ A well organized file structure that has folders for all file types
 ***References***
 
 https://code.tutsplus.com/tutorials/top-15-best-practices-for-writing-super-readable-code--net-8118
+
+https://www.vogella.com/tutorials/JUnit/article.html
